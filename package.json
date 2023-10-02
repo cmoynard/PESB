@@ -6,19 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/bot.ts",
-    "start": "node dist/bot.js",
-    "build": "tsup src/bot.ts --minify"
+    "start": "nod -r dotenv/config dist/bot.js",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/builders": "^1.6.5",
+    "@discordjs/rest": "^2.0.1",
+    "discord-api-types": "^0.37.59",
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "tsup": "^7.2.0",
-    "tsx": "^3.13.0",
+    "@types/node": "^20.8.0",
     "typescript": "^5.2.2"
   }
 }
